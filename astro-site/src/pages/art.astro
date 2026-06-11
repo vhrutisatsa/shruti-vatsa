@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/footer.astro";
+---
+
+
+<BaseLayout>
+
+<Navbar />
+
+<div class="art-nav">
+
+  <a href="#paintings">Paintings</a>
+
+  <a href="#illustrations">Illustrations</a>
+
+  <a href="#design">Design Work</a>
+
+</div>
+
+<section>
+
+<h2>Paintings</h2>
+
+<div class="gallery">
+
+  <div class="art-card">
+
+    <img
+      src="/images/art/Phases.jpg"
+      alt="Painting"
+    />
+
+    <h3>The Geometry of Longing</h3>
+
+    <p>
+      Oil on canvas · 2025
+    </p>
+
+  </div>
+
+  <div class="art-card">
+
+    <img
+      src="/images/art/Phases.jpg"
+      alt="Painting"
+    />
+
+    <h3>Title</h3>
+
+    <p>
+      Acrylic on canvas · 2025
+    </p>
+
+  </div>
+
+</div>
+
+</section>
+<Footer />
+</BaseLayout>

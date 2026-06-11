@@ -1,0 +1,49 @@
+:root {
+  --bg: #f7f3ee;
+  --text: #222222;
+  --accent: #2e4a43;
+  --secondary: #75615b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, sans-serif;
+  line-height: 1.7;
+}
+
+h1,h2,h3,h4 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+section {
+  padding: 6rem 10%;
+}
+
+section{
+
+  animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}

@@ -1,0 +1,305 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/footer.astro";
+---
+
+<BaseLayout>
+
+<Navbar />
+
+<section class="hero">
+
+  <h1>Shruti Vatsa</h1>
+
+  <p class="subtitle">
+    Researcher · Writer · Artist
+  </p>
+
+  <p class="intro">
+    Exploring decision making,
+    information foraging,
+    and computational models of behaviour.
+  </p>
+
+  <div class="hero-buttons">
+  <a href="/research" class="btn">Research</a>
+  <a href="/art" class="btn">Artwork</a>
+  </div>
+
+  <p>
+    I am a researcher interested in how humans search,
+    learn, and make decisions under uncertainty.
+    <br>
+    My work combines behavioural experiments,
+    computational modelling, and cognitive neuroscience.
+    <br>
+    Alongside research, I write and create visual art.
+  </p>
+</section>
+
+<div class="divider"></div>
+
+<section id="research-preview">
+  <div class="image-container"> <img src="/images/illustrations/neuron.PNG" class="neuron-img" alt="Illustration of a neuron"> </div>
+  <h2>Research</h2>
+
+  <p>
+    I study how humans search, learn, and make decisions under uncertainty using behavioural experiments and computational modelling.
+  </p>
+
+  <div class="cards">
+
+    <a href="/research" class="card">
+      <h3>Environmental Structure and Foraging</h3>
+      <p>
+      Investigating how environmental structure influences patch-leaving decisions.</p>
+    </a>
+
+    <a href="/research" class="card">
+      <h3>Smartphone Information Foraging</h3>
+      <p> Understanding information search behaviour in digital environments.</p>
+    </a>
+
+    <a href="/research" class="card">
+      <h3>Computational Modelling</h3>
+      <p> Using HDDM, Bayesian models and mixed-effects modelling to explain behaviour. </p>
+    </a>
+
+  </div>
+
+</section>
+
+<section>
+
+<h2>Featured Work</h2>
+
+<div class="featured">
+
+  <div class="featured-image">
+    <img
+    src="/images/art/Phases.jpg"
+    alt="Featured artwork"
+    />
+  </div>
+
+  <div>
+
+    <h3>The Geometry of Longing</h3>
+
+    <p>
+      Acrylic on Canvas, 2021
+    </p>
+
+    <p>
+      Inspired by the emotional geometry that encompasses the phases of longing.
+
+  </div>
+
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<section id="writing-preview">
+
+  <h2>Writing</h2>
+
+  <p>
+    Notes and essays on neuroscience, learning, uncertainty and scientific thinking.
+  </p>
+
+  <div class="cards">
+
+    <a href="/writing" class="card">
+      <h3>What is Information Foraging?</h3>
+      <p>Coming soon.</p>
+    </a>
+
+    <a href="/writing" class="card">
+      <h3>Why Humans Keep Scrolling</h3>
+      <p>Coming soon.</p>
+    </a>
+
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<section id="art-preview">
+
+  <h2>Art</h2>
+
+  <p>
+    Paintings, illustrations and design work exploring emotion, literature and science.
+  </p>
+
+  <div class="cards">
+
+    <a href="/art" class="card">
+      <h3>Paintings</h3>
+    </a>
+
+    <a href="/art" class="card">
+      <h3>Illustrations</h3>
+    </a>
+
+    <a href="/art" class="card">
+      <h3>Design Work</h3>
+    </a>
+
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<section>
+
+<h2>Current Focus</h2>
+
+<ul>
+
+<li>
+Preparing PhD applications in computational and cognitive neuroscience
+</li>
+
+<li>
+Developing computational models of foraging
+</li>
+
+<li>
+Expanding a public portfolio of research, writing, and art
+</li>
+
+</ul>
+
+</section>
+<Footer />
+</BaseLayout>
+
+<style>
+.hero{
+  min-height:80vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+}
+
+.hero-buttons{
+  margin-top:2rem;
+  display:flex;
+  gap:1rem;
+  }
+
+  .btn{
+    padding:0.8rem 1.5rem;
+    border:1px solid #2e4a43;
+    border-radius:30px;
+  }
+
+  .btn:hover{
+    background:#2e4a43;
+    color:white;
+  }
+
+h1{
+  font-size:5rem;
+  margin-bottom:0;
+}
+
+.subtitle{
+  color:#2e4a43;
+  font-size:1.3rem;
+}
+
+.intro{
+  max-width:700px;
+  font-size:1.2rem;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:2rem;
+  margin-top:2rem;
+}
+
+.card{
+
+  display:block;
+
+  padding:2rem;
+
+  min-height:220px;
+
+  border:1px solid rgba(0,0,0,0.08);
+
+  border-radius:16px;
+
+  background:white;
+
+  transition:all 0.3s ease;
+}
+
+.card:hover{
+
+  transform:translateY(-8px);
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.08);
+}
+
+.illustration{
+  font-size:2rem;
+  color:#2e4a43;
+  text-align:center;
+}
+
+.neuron-img {
+  max-width: 100%; /* Ensures it scales down on mobile screens */
+  height: auto;    /* Keeps the image in proportion */
+  width: 400px;    /* Adjust this exact number to your preferred size */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Aligns the image horizontally to the center */
+}
+
+.divider{
+  width:60px;
+  height:1px;
+
+  background:#75615b;
+
+  margin:0 auto;
+}
+
+.featured{
+  display:grid;
+  grid-template-columns:2.5fr 1fr;
+  gap:3rem;
+  align-items:center;
+}
+
+.featured-image{
+  height:500px;
+  overflow:hidden;
+  border-radius:12px;
+}
+
+.featured-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+</style>
