@@ -23,25 +23,53 @@ import Footer from "../components/footer.astro";
   </p>
 
   <div class="hero-buttons">
-  <a href="/research" class="btn">Research</a>
-  <a href="/art" class="btn">Artwork</a>
+    <a href={`${import.meta.env.BASE_URL}research`} class="btn">Research</a>
+    <a href={`${import.meta.env.BASE_URL}art`} class="btn">Artwork</a>
   </div>
 
-  <p>
-    I am a researcher interested in how humans search,
-    learn, and make decisions under uncertainty.
-    <br>
-    My work combines behavioural experiments,
-    computational modelling, and cognitive neuroscience.
-    <br>
-    Alongside research, I write and create visual art.
-  </p>
+</section>
+
+<section class="about-section">
+
+  <div class="about-text">
+
+    <h2>About</h2>
+
+    <p>
+      I am a researcher interested in how humans search,
+      learn, and make decisions under uncertainty.
+    </p>
+
+    <p>
+      My work combines behavioural experiments,
+      computational modelling, and cognitive neuroscience
+      to understand adaptive behaviour in complex environments.
+    </p>
+
+    <p>
+      Alongside research, I write essays on science,
+      literature, learning, and creativity, and create
+      visual art inspired by psychology, philosophy,
+      and human experience.
+    </p>
+
+  </div>
+
+  <div class="about-image">
+
+    <img
+      src={`${import.meta.env.BASE_URL}images/headshot.jpg`}
+      alt="Shruti Vatsa"
+    />
+
+  </div>
+
 </section>
 
 <div class="divider"></div>
 
 <section id="research-preview">
-  <div class="image-container"> <img src="/images/illustrations/neuron.PNG" class="neuron-img" alt="Illustration of a neuron"> </div>
+  <div class="image-container"> <img src={`${import.meta.env.BASE_URL}images/illustrations/neuron.PNG`}" class="neuron-img" alt="Illustration of a neuron"> </div>
   <h2>Research</h2>
 
   <p>
@@ -50,18 +78,18 @@ import Footer from "../components/footer.astro";
 
   <div class="cards">
 
-    <a href="/research" class="card">
+    <a href={`${import.meta.env.BASE_URL}research`} class="card">
       <h3>Environmental Structure and Foraging</h3>
       <p>
       Investigating how environmental structure influences patch-leaving decisions.</p>
     </a>
 
-    <a href="/research" class="card">
+    <a href={`${import.meta.env.BASE_URL}research`} class="card">
       <h3>Smartphone Information Foraging</h3>
       <p> Understanding information search behaviour in digital environments.</p>
     </a>
 
-    <a href="/research" class="card">
+    <a href={`${import.meta.env.BASE_URL}research`} class="card">
       <h3>Computational Modelling</h3>
       <p> Using HDDM, Bayesian models and mixed-effects modelling to explain behaviour. </p>
     </a>
@@ -78,7 +106,7 @@ import Footer from "../components/footer.astro";
 
   <div class="featured-image">
     <img
-    src="/images/art/Phases.jpg"
+    src={`${import.meta.env.BASE_URL}images/art/Phases.jpg`}"
     alt="Featured artwork"
     />
   </div>
@@ -112,12 +140,12 @@ import Footer from "../components/footer.astro";
 
   <div class="cards">
 
-    <a href="/writing" class="card">
+    <a href={`${import.meta.env.BASE_URL}writing`} class="card">
       <h3>What is Information Foraging?</h3>
       <p>Coming soon.</p>
     </a>
 
-    <a href="/writing" class="card">
+    <a href={`${import.meta.env.BASE_URL}writing`} class="card">
       <h3>Why Humans Keep Scrolling</h3>
       <p>Coming soon.</p>
     </a>
@@ -138,15 +166,15 @@ import Footer from "../components/footer.astro";
 
   <div class="cards">
 
-    <a href="/art" class="card">
+    <a href={`${import.meta.env.BASE_URL}art`} class="card">
       <h3>Paintings</h3>
     </a>
 
-    <a href="/art" class="card">
+    <a href={`${import.meta.env.BASE_URL}art`} class="card">
       <h3>Illustrations</h3>
     </a>
 
-    <a href="/art" class="card">
+    <a href={`${import.meta.env.BASE_URL}art`} class="card">
       <h3>Design Work</h3>
     </a>
 
@@ -302,4 +330,70 @@ h1{
   display:block;
 }
 
+.about-section{
+
+  max-width:1100px;
+
+  margin:8rem auto;
+
+  display:grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap:4rem;
+
+  align-items:center;
+}
+
+.about-text h2{
+
+  margin-bottom:1.5rem;
+}
+
+.about-text p{
+
+  font-size:1.05rem;
+
+  line-height:1.9;
+
+  margin-bottom:1.2rem;
+}
+
+.about-image{
+
+  display:flex;
+
+  justify-content:center;
+}
+
+.about-image img{
+
+  width:100%;
+
+  max-width:260px;
+
+  border-radius:16px;
+
+  object-fit:cover;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px){
+
+  .about-section{
+
+    grid-template-columns:1fr;
+
+    text-align:left;
+
+    gap:2rem;
+  }
+
+  .about-image{
+
+    order:-1;
+  }
+
+}
 </style>

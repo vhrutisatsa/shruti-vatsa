@@ -10,32 +10,28 @@ import Footer from "../components/footer.astro";
 <Navbar />
 
 <div class="art-nav">
-
   <a href="#paintings">Paintings</a>
-
   <a href="#illustrations">Illustrations</a>
-
   <a href="#design">Design Work</a>
-
 </div>
 
 <section>
-
-<h2>Paintings</h2>
+<p> My visual work explores identity, memory, literature, science, and emotional experience through painting, illustration, and design. </p>
+<h2 id="paintings">Paintings</h2>
 
 <div class="gallery">
 
   <div class="art-card">
 
     <img
-      src="/images/art/Phases.jpg"
-      alt="Painting"
+      src={`${import.meta.env.BASE_URL}images/art/Phases.jpg`}
+      class="art-image"
     />
 
     <h3>The Geometry of Longing</h3>
 
     <p>
-      Oil on canvas · 2025
+      Acrylic on Canvas · 2021
     </p>
 
   </div>
@@ -43,20 +39,107 @@ import Footer from "../components/footer.astro";
   <div class="art-card">
 
     <img
-      src="/images/art/Phases.jpg"
-      alt="Painting"
+      src={`${import.meta.env.BASE_URL}images/art/fireabove.jpg`}
+      class="art-image"
     />
 
-    <h3>Title</h3>
+    <h3>The Fire Above</h3>
 
     <p>
-      Acrylic on canvas · 2025
+      Acrylic on Canvas · 2020
     </p>
 
   </div>
 
 </div>
 
+<h2 id="illustrations">Illustrations</h2>
+
+<div class="gallery">
+
+...
+...
+...
+
+</div>
+
+<h2 id="portraits">Digital Portraits</h2>
+
+<div class="gallery">
+
+...
+...
+...
+
+</div>
+
+<h2 id="design">Design Work</h2>
+
+<div class="gallery">
+
+...
+...
+...
+
+</div>
+
 </section>
+
+<style>
+  .art-image{
+
+  width:100%;
+
+  aspect-ratio:1/1;
+
+  object-fit:cover;
+
+  display:block;
+  }
+
+  .gallery{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:2rem;
+
+  margin-top:2rem;
+  }
+
+.art-card{
+
+  background:white;
+
+  border-radius:12px;
+
+  overflow:hidden;
+
+  transition:0.3s;
+}
+
+.art-card:hover{
+
+  transform:translateY(-6px);
+}
+
+.art-image{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  display:block;
+}
+
+.art-nav{
+  display:flex;
+  gap:2rem;
+  justify-content:center;
+  margin:2rem 0 4rem;
+}
+
+</style>
+
 <Footer />
 </BaseLayout>
