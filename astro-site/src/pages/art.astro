@@ -11,7 +11,6 @@ import Footer from "../components/footer.astro";
 
 <div class="art-nav">
   <a href="#paintings">Paintings</a>
-  <a href="#illustrations">Illustrations</a>
   <a href="#design">Design Work</a>
 </div>
 
@@ -24,7 +23,7 @@ import Footer from "../components/footer.astro";
   <div class="art-card">
 
     <img
-      src={`${import.meta.env.BASE_URL}images/art/Phases.jpg`}
+      src={`${import.meta.env.BASE_URL}/images/art/Phases.jpg`}
       class="art-image"
     />
 
@@ -39,7 +38,7 @@ import Footer from "../components/footer.astro";
   <div class="art-card">
 
     <img
-      src={`${import.meta.env.BASE_URL}images/art/fireabove.jpg`}
+      src={`${import.meta.env.BASE_URL}/images/art/fireabove.jpg`}
       class="art-image"
     />
 
@@ -53,33 +52,38 @@ import Footer from "../components/footer.astro";
 
 </div>
 
-<h2 id="illustrations">Illustrations</h2>
-
-<div class="gallery">
-
-...
-...
-...
-
-</div>
-
-<h2 id="portraits">Digital Portraits</h2>
-
-<div class="gallery">
-
-...
-...
-...
-
-</div>
-
 <h2 id="design">Design Work</h2>
 
 <div class="gallery">
+  <div class="art-card">
 
-...
-...
-...
+    <img
+      src={`${import.meta.env.BASE_URL}/images/design/15.png`}
+      class="art-image"
+    />
+
+    <h3>IITK-RICE University Conference Poster</h3>
+
+    <p>
+      Innovations in NeuroTech · 2024
+    </p>
+
+  </div>
+
+  <div class="art-card">
+
+    <img
+      src={`${import.meta.env.BASE_URL}/images/design/16.png`}
+      class="art-image"
+    />
+
+    <h3>IITK-RICE University Conference Schedule</h3>
+
+    <p>
+      Innovations in NeuroTech · 2024
+    </p>
+
+  </div>
 
 </div>
 
